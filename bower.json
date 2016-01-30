@@ -1,0 +1,28 @@
+{
+  "name": "last-fm-client",
+  "version": "1.0.0",
+  "description": "This webApp use the LastFM API to list the Top Ten Songs",
+  "homepage": "https://github.com/alanjr17/last-fm-client",
+  "authors": [
+    "Alan Omar Martinez"
+  ],
+  "main": "index.html",
+  "keywords": [
+    "last-fm"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.4.9",
+    "angular-bootstrap": "^1.1.1",
+    "bootstrap": "^3.3.6",
+    "angular-ui-router": "^0.2.17",
+    "angular-sanitize": "^1.4.9"
+  }
+}
