@@ -1,0 +1,11 @@
+p hola mundo
+
+div.container(ng-repeat="artist in data.similarartists.artist")
+    div.row
+        div.col-xs-12
+            h1 {{artist.name}}
+    div.row
+        div.col-xs-4
+            img(ng-src="{{artist.image[2]['#text']}}")
+        div.col-xs-8
+
