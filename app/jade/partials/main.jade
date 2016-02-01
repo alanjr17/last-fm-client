@@ -1,8 +1,12 @@
-button(ui-sref="lastFM.tracks.list")
-    | tracks
+div.container-fluid
+    div.row
+        div.col-xs-10.col-xs-offset-1.text-center
+            div.tab-container(ng-class="{'active': $state.includes('lastFM.tracks')}")
+                h4(ui-sref="lastFM.tracks.list")
+                    | Top Tracks
 
-button(ui-sref="lastFM.artists.list")
-    | artists
+            div.tab-container(ng-class="{'active': $state.includes('lastFM.artists')}")
+                h4(ui-sref="lastFM.artists.list") Top Artists
 
 div(ui-view="")
 div.container(ng-repeat="artist in data.similarartists.artist")
