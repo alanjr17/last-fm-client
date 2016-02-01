@@ -6,15 +6,8 @@ div.container-fluid
                     | Top Tracks
 
             div.tab-container(ng-class="{'active': $state.includes('lastFM.artists')}")
-                h4(ui-sref="lastFM.artists.list") Top Artists
+                h4(ui-sref="lastFM.artists.list")
+                    | Top Artists
 
-div(ui-view="")
-div.container(ng-repeat="artist in data.similarartists.artist")
-    div.row
-        div.col-xs-12
-            h1 {{artist.name}}
-    div.row
-        div.col-xs-4
-            img(ng-src="{{artist.image[2]['#text']}}")
-        div.col-xs-8
+    div(ui-view="")
 
