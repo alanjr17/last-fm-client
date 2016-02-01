@@ -1,10 +1,6 @@
 (function () {
-    function controller ($scope, topBrandSrv) {
-
-        topBrandSrv.getAll()
-            .success(function success (response) {
-                $scope.artists = response.topartists.artist;
-            });
+    function controller (list) {
+        this.list = list.data.topartists.artist;
     }
 
     angular.module('lastFmApp')

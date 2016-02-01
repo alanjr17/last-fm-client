@@ -1,9 +1,6 @@
 (function () {
-    function controller ($scope, $stateParams, topBrandSrv) {
-        topBrandSrv.get($stateParams.artistId)
-            .success(function success (response) {
-                $scope.artist = response.artist;
-            });
+    function controller (detail) {
+        this.detail = detail.data.artist;
     }
 
     angular.module('lastFmApp')

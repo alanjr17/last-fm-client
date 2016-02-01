@@ -1,5 +1,4 @@
 div.container
-    div.row(ng-repeat="artist in artists")
+    div.row(ng-repeat="artist in artists.list")
         div.col-xs-12
-        a(ng-href="#/artists/{{artist.name}}")
-            | {{artist.name}}
+            | {{($index+1)}}. #[a(ng-href="#/artists/{{artist.name}}") {{artist.name}}]

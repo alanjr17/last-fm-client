@@ -1,10 +1,6 @@
 (function () {
-    function controller ($scope, topTracksSrv) {
-
-        topTracksSrv.getAll()
-            .success(function success (response) {
-                $scope.tracks = response.tracks.track;
-            });
+    function controller (list) {
+        this.list = list.data.tracks.track;
     }
 
     angular.module('lastFmApp')

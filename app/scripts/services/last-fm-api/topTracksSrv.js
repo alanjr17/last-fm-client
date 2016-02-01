@@ -7,13 +7,15 @@
             getAll: getAll
         };
 
-        function getAll (country) {
+        function getAll (country, limit) {
             var method = 'geo.getTopTracks';
             var client = new LastFMHttpClient(method);
             var defaultCountry = 'mexico';
+            var defaultLimit = 10;
 
             return client.get({
-                country: country || defaultCountry
+                country: country || defaultCountry,
+                limit: limit || defaultLimit
             });
         }
 
