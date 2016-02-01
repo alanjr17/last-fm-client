@@ -1,5 +1,10 @@
-p hola mundo
+button(ui-sref="lastFM.tracks.list")
+    | tracks
 
+button(ui-sref="lastFM.artists.list")
+    | artists
+
+div(ui-view="")
 div.container(ng-repeat="artist in data.similarartists.artist")
     div.row
         div.col-xs-12

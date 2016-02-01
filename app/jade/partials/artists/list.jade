@@ -1,0 +1,5 @@
+div.container
+    div.row(ng-repeat="artist in artists")
+        div.col-xs-12
+        a(ng-href="#/artists/{{artist.name}}")
+            | {{artist.name}}

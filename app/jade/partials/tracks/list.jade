@@ -1,0 +1,5 @@
+div.container
+    div.row(ng-repeat="track in tracks")
+        div.col-xs-12
+        a(ng-href="#/artists/{{track.artist.name}}")
+            | {{track.name}}

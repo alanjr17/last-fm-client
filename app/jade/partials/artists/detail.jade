@@ -1,0 +1,9 @@
+div.row
+    div.col-xs-12
+        h1 {{artist.name}}
+div.row
+    div.col-xs-4.text-center
+        img(ng-src="{{artist.image[5]['#text']}}", alt="{{artist.name}}")
+
+    div.col-xs-8.text-justify
+        p(ng-bind-html="artist.bio.summary")
