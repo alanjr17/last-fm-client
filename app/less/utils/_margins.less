@@ -1,0 +1,83 @@
+@iterations-margin:30;
+
+.generate-margins(@iterations-margin);
+
+.generate-margins(@n, @i: 1) when (@i =< @n) {
+
+
+    @value: 5*@i;
+
+
+    .marginX-x@{value} {
+        margin-left: (@value) + 0px;
+        margin-right: (@value) + 0px;
+    }
+
+
+    .marginY-x@{value} {
+        margin-top: (@value) + 0px;
+        margin-bottom: (@value) + 0px;
+    }
+
+
+    .margin-top-x@{value} {
+        margin-top: (@value) + 0px;
+    }
+
+
+    .margin-bottom-x@{value} {
+        margin-bottom: (@value) + 0px;
+    }
+
+
+    .margin-left-x@{value} {
+        margin-left: (@value) + 0px;
+    }
+
+
+    .margin-right-x@{value} {
+        margin-right: (@value) + 0px;
+    }
+
+
+    .generate-margins(@n, (@i + 1));
+}
+
+
+
+.margin-none {
+    margin: 0;
+}
+
+
+.marginX-none {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.marginY-none {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+.margin-left-none {
+    margin-left: 0;
+}
+
+
+.margin-right-none {
+    margin-right: 0;
+}
+
+
+.margin-top-none {
+    margin-top: 0;
+}
+
+
+.margin-bottom-none {
+    margin-bottom: 0;
+}
+

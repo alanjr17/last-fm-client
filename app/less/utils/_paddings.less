@@ -1,0 +1,73 @@
+@iterations-padding:30;
+
+.generate-paddings(@iterations-padding);
+
+.generate-paddings(@n, @i: 1) when (@i =< @n) {
+
+
+    @value: 5*@i;
+
+
+    .paddingX-x@{value} {
+        padding-left: (@value) + 0px;
+        padding-right: (@value) + 0px;
+    }
+
+
+    .paddingY-x@{value} {
+        padding-top: (@value) + 0px;
+        padding-bottom: (@value) + 0px;
+    }
+
+
+    .padding-top-x@{value} {
+        padding-top: (@value) + 0px;
+    }
+
+
+    .padding-bottom-x@{value} {
+        padding-bottom: (@value) + 0px;
+    }
+
+
+    .padding-left-x@{value} {
+        padding-left: (@value) + 0px;
+    }
+
+
+    .padding-right-x@{value} {
+        padding-right: (@value) + 0px;
+    }
+
+
+    .generate-paddings(@n, (@i + 1));
+}
+
+
+
+.padding-none {
+    padding: 0;
+}
+
+
+.paddingX-none {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.paddingY-none {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.padding-left-none {
+    padding-left: 0;
+}
+
+
+.padding-right-none {
+    padding-right: 0;
+}
+
