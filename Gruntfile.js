@@ -14,6 +14,12 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: 'dist/bower_components',
                 expand: true
+            },
+            assets: {
+                cwd: 'app/assets',
+                src: '**',
+                dest: 'dist/assets',
+                expand: true
             }
         },
         jade: {
