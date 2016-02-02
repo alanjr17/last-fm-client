@@ -1,4 +1,13 @@
-div.container
-    div.row(ng-repeat="artist in artists.list")
-        div.col-xs-12
-            | {{($index+1)}}. #[a(ng-href="#/artists/{{artist.name}}") {{artist.name}}]
+div.row.marginY-x40
+    div.col-xs-10.col-xs-offset-1
+        table.table
+            thead
+                tr
+                    th.text-center #
+                    th Artist
+            tbody
+                tr(ng-repeat="artist in artists.list")
+                    td.text-center {{($index + 1)}}
+                    td
+                        a(ng-href="#/artists/{{artist.name}}") {{artist.name}}
+

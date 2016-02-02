@@ -1,9 +1,13 @@
-div.row
-    div.col-xs-12
+div.row.marginY-x20
+    div.col-xs-4.col-xs-offset-1
+        h4(ui-sref="lastFM.artists.list")
+            a more artists...
+div.row.marginY-x20
+    div.col-xs-4.col-xs-offset-1.text-center
         h1 {{artist.detail.name}}
-div.row
-    div.col-xs-4.text-center
+div.row.margin-bottom-x50
+    div.col-xs-4.col-xs-offset-1.text-center
         img(ng-src="{{artist.detail.image[5]['#text']}}", alt="{{artist.detail.name}}")
 
-    div.col-xs-8.text-justify
+    div.col-xs-6.text-justify
         p(ng-bind-html="artist.detail.bio.summary")
